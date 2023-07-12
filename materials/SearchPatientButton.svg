@@ -3,137 +3,212 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
-	.st1{clip-path:url(#SVGID_00000178912027128539378830000015387439568911964077_);}
-	.st2{clip-path:url(#SVGID_00000180349061199354020850000017581473564522508216_);}
-	.st3{fill:none;stroke:#05066D;stroke-width:48.0086;stroke-miterlimit:4.0007;}
-	.st4{fill:#05066D;}
+	.st0{clip-path:url(#SVGID_00000132072583281046186000000000903783661616477340_);}
+	.st1{clip-path:url(#SVGID_00000044175369037672720940000010917319047793910424_);}
+	.st2{fill:url(#SVGID_00000047743708501355706210000015623081831504760195_);}
+	.st3{clip-path:url(#SVGID_00000181783216194320316010000017498429161125805245_);}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#05066D;}
+	.st5{fill:#05066D;}
 </style>
-<rect x="100.9" y="242.2" class="st0" width="1717.3" height="594.4"/>
 <g>
-	<g>
-		<defs>
-			<rect id="SVGID_1_" x="88.7" y="233.2" width="1743" height="614"/>
-		</defs>
-		<clipPath id="SVGID_00000135686625982044349870000010973720826016582315_">
-			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-		</clipPath>
-		<g style="clip-path:url(#SVGID_00000135686625982044349870000010973720826016582315_);">
-			<g>
-				<g>
-					<defs>
-						<path id="SVGID_00000065050323436568322670000001134375115728363163_" d="M101.7,233.2h1717c7.2,0,13,5.8,13,13v588
-							c0,7.2-5.8,13-13,13h-1717c-7.2,0-13-5.8-13-13v-588C88.7,239,94.5,233.2,101.7,233.2"/>
-					</defs>
-					<clipPath id="SVGID_00000062152359183223075790000017231891056182111422_">
-						<use xlink:href="#SVGID_00000065050323436568322670000001134375115728363163_"  style="overflow:visible;"/>
-					</clipPath>
-					<g style="clip-path:url(#SVGID_00000062152359183223075790000017231891056182111422_);">
-						<path class="st3" d="M101.7,233.2h1717c7.2,0,13,5.8,13,13v588c0,7.2-5.8,13-13,13h-1717c-7.2,0-13-5.8-13-13v-588
-							C88.7,239,94.5,233.2,101.7,233.2"/>
-					</g>
-				</g>
+	<defs>
+		<rect id="SVGID_1_" x="93.7" y="233.2" width="1742.7" height="613"/>
+	</defs>
+	<clipPath id="SVGID_00000055706574396560656850000015691511934798299827_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g style="clip-path:url(#SVGID_00000055706574396560656850000015691511934798299827_);">
+		<g>
+			<defs>
+				<path id="SVGID_00000140723709256644198630000015385388276015127201_" d="M135.7,233.2h1658.7c11.1,0,21.8,4.4,29.7,12.3
+					c7.9,7.9,12.3,18.6,12.3,29.7v529.6c0,11.1-4.4,21.8-12.3,29.7c-7.9,7.9-18.6,12.3-29.7,12.3H135.7c-11.1,0-21.8-4.4-29.7-12.3
+					c-7.9-7.9-12.3-18.6-12.3-29.7V275.2c0-11.1,4.4-21.8,12.3-29.7C113.8,237.6,124.5,233.2,135.7,233.2"/>
+			</defs>
+			<clipPath id="SVGID_00000013151529987330589020000010006838653439014821_">
+				<use xlink:href="#SVGID_00000140723709256644198630000015385388276015127201_"  style="overflow:visible;"/>
+			</clipPath>
+			<g style="clip-path:url(#SVGID_00000013151529987330589020000010006838653439014821_);">
+				
+					<linearGradient id="SVGID_00000165953626027893297990000018414597471255144593_" gradientUnits="userSpaceOnUse" x1="388.7116" y1="881.4729" x2="1113.6005" y2="881.4729" gradientTransform="matrix(2.404 0 0 -2.404 -840.8246 2658.8103)">
+					<stop  offset="0" style="stop-color:#E4EEFF"/>
+					<stop  offset="1.562500e-02" style="stop-color:#E4EEFF"/>
+					<stop  offset="3.125000e-02" style="stop-color:#E3EDFF"/>
+					<stop  offset="4.687500e-02" style="stop-color:#E2ECFF"/>
+					<stop  offset="6.250000e-02" style="stop-color:#E1ECFF"/>
+					<stop  offset="7.812500e-02" style="stop-color:#E0EBFF"/>
+					<stop  offset="9.375000e-02" style="stop-color:#DFEAFF"/>
+					<stop  offset="0.1094" style="stop-color:#DFEAFF"/>
+					<stop  offset="0.125" style="stop-color:#DEE9FF"/>
+					<stop  offset="0.1406" style="stop-color:#DDE8FF"/>
+					<stop  offset="0.1562" style="stop-color:#DCE8FF"/>
+					<stop  offset="0.1719" style="stop-color:#DBE7FF"/>
+					<stop  offset="0.1875" style="stop-color:#DBE7FF"/>
+					<stop  offset="0.2031" style="stop-color:#DAE6FF"/>
+					<stop  offset="0.2188" style="stop-color:#D9E5FF"/>
+					<stop  offset="0.2344" style="stop-color:#D8E5FF"/>
+					<stop  offset="0.25" style="stop-color:#D7E4FF"/>
+					<stop  offset="0.2656" style="stop-color:#D7E3FF"/>
+					<stop  offset="0.2812" style="stop-color:#D6E3FF"/>
+					<stop  offset="0.2969" style="stop-color:#D5E2FF"/>
+					<stop  offset="0.3125" style="stop-color:#D4E1FF"/>
+					<stop  offset="0.3281" style="stop-color:#D3E1FF"/>
+					<stop  offset="0.3438" style="stop-color:#D2E0FF"/>
+					<stop  offset="0.3594" style="stop-color:#D2E0FF"/>
+					<stop  offset="0.375" style="stop-color:#D1DFFF"/>
+					<stop  offset="0.3906" style="stop-color:#D0DEFF"/>
+					<stop  offset="0.4062" style="stop-color:#CFDEFF"/>
+					<stop  offset="0.4219" style="stop-color:#CEDDFF"/>
+					<stop  offset="0.4375" style="stop-color:#CEDCFF"/>
+					<stop  offset="0.4531" style="stop-color:#CDDCFF"/>
+					<stop  offset="0.4688" style="stop-color:#CCDBFF"/>
+					<stop  offset="0.4844" style="stop-color:#CBDAFF"/>
+					<stop  offset="0.5" style="stop-color:#CADAFF"/>
+					<stop  offset="0.5156" style="stop-color:#CAD9FF"/>
+					<stop  offset="0.5312" style="stop-color:#C9D9FF"/>
+					<stop  offset="0.5469" style="stop-color:#C8D8FF"/>
+					<stop  offset="0.5625" style="stop-color:#C7D7FF"/>
+					<stop  offset="0.5781" style="stop-color:#C6D7FF"/>
+					<stop  offset="0.5938" style="stop-color:#C5D6FF"/>
+					<stop  offset="0.6094" style="stop-color:#C5D5FF"/>
+					<stop  offset="0.625" style="stop-color:#C4D5FF"/>
+					<stop  offset="0.6406" style="stop-color:#C3D4FF"/>
+					<stop  offset="0.6562" style="stop-color:#C2D3FF"/>
+					<stop  offset="0.6719" style="stop-color:#C1D3FF"/>
+					<stop  offset="0.6875" style="stop-color:#C1D2FF"/>
+					<stop  offset="0.7031" style="stop-color:#C0D2FF"/>
+					<stop  offset="0.7188" style="stop-color:#BFD1FF"/>
+					<stop  offset="0.7344" style="stop-color:#BED0FF"/>
+					<stop  offset="0.75" style="stop-color:#BDD0FF"/>
+					<stop  offset="0.7656" style="stop-color:#BDCFFF"/>
+					<stop  offset="0.7812" style="stop-color:#BCCEFF"/>
+					<stop  offset="0.7969" style="stop-color:#BBCEFF"/>
+					<stop  offset="0.8125" style="stop-color:#BACDFF"/>
+					<stop  offset="0.8281" style="stop-color:#B9CCFF"/>
+					<stop  offset="0.8438" style="stop-color:#B8CCFF"/>
+					<stop  offset="0.8594" style="stop-color:#B8CBFF"/>
+					<stop  offset="0.875" style="stop-color:#B7CBFF"/>
+					<stop  offset="0.8906" style="stop-color:#B6CAFF"/>
+					<stop  offset="0.9062" style="stop-color:#B5C9FF"/>
+					<stop  offset="0.9219" style="stop-color:#B4C9FF"/>
+					<stop  offset="0.9375" style="stop-color:#B4C8FF"/>
+					<stop  offset="0.9531" style="stop-color:#B3C7FF"/>
+					<stop  offset="0.9688" style="stop-color:#B2C7FF"/>
+					<stop  offset="0.9844" style="stop-color:#B1C6FF"/>
+					<stop  offset="1" style="stop-color:#B0C5FF"/>
+				</linearGradient>
+				<path style="fill:url(#SVGID_00000165953626027893297990000018414597471255144593_);" d="M93.7,233.2v613h1742.7v-613H93.7z"/>
 			</g>
 		</g>
 	</g>
 </g>
 <g>
-	<g transform="translate(433.540218, 362.531459)">
+	<defs>
+		<rect id="SVGID_00000165937931996400169920000016776654023792381317_" x="1493.2" y="447.3" width="112.9" height="169.4"/>
+	</defs>
+	<clipPath id="SVGID_00000006679940283983291050000014377312864950035089_">
+		<use xlink:href="#SVGID_00000165937931996400169920000016776654023792381317_"  style="overflow:visible;"/>
+	</clipPath>
+	<g style="clip-path:url(#SVGID_00000006679940283983291050000014377312864950035089_);">
+		<path class="st4" d="M1493.3,473.4v-26.1l112.8,84.7l-112.8,84.7v-26.1l78-58.6L1493.3,473.4z"/>
+	</g>
+</g>
+<g>
+	<g transform="translate(277.376447, 365.587262)">
 		<g>
-			<path class="st4" d="M223.6,25.4h34.3c0-32.1-26.9-46-51.8-46c-29.7,0-54.8,18.3-53.2,49v-0.2c2.6,32.1,29.3,37.1,51.8,39.2
-				c5.2,0.6,21.1,1,21.1,11c0,8-9,11.2-20.1,11.2c-7.8,0-19.3-2.6-19.3-16.3h-34.5c0,35.5,30.9,49.4,53.6,49.4
+			<path class="st5" d="M171.5,26.4h34.3c0-32.1-26.9-46-51.8-46c-29.7,0-54.8,18.3-53.2,49v-0.2c2.6,32.1,29.3,37.1,51.8,39.2
+				c5.2,0.6,21.1,1,21.1,11c0,8-9,11.2-20.1,11.2c-7.8,0-19.3-2.6-19.3-16.3H99.8c0,35.5,30.9,49.4,53.6,49.4
 				c26.5,0,54.8-16.7,54.8-45.8c0-3-0.4-6.6-1-9.8c-6-25.1-30.9-30.3-50.6-32.9c-4.6-0.4-21.1-0.6-21.1-11c0-7.6,7.4-12.2,17.9-12.2
-				C216,11.1,223.6,16.1,223.6,25.4z"/>
+				C164,12.1,171.5,17.1,171.5,26.4z"/>
 		</g>
 	</g>
 </g>
 <g>
-	<g transform="translate(524.066208, 362.531459)">
+	<g transform="translate(367.920036, 365.587262)">
 		<g>
-			<path class="st4" d="M184.6-19.8v140.6h92V88h-57.8V65.7h56.4V32.6h-56.4V13.1h57.6v-32.9C276.4-19.8,184.6-19.8,184.6-19.8z"/>
+			<path class="st5" d="M132.6-18.8v140.7h92V89h-57.8V66.7h56.4V33.6h-56.4V14.1h57.6v-32.9H132.6z"/>
 		</g>
 	</g>
 </g>
 <g>
-	<g transform="translate(604.4341, 362.531459)">
+	<g transform="translate(448.30362, 365.587262)">
 		<g>
-			<path class="st4" d="M258.9-20.2l-55.8,141h36.5l7.8-20.5H295l7.8,20.5h38.4l-58-141C283.2-20.2,258.9-20.2,258.9-20.2z
-				 M271.2,36L282,66.3l0.8,2.4h-23.1l1.2-3.2L271.2,36z"/>
+			<path class="st5" d="M206.8-19.2l-55.8,141h36.5l7.8-20.5h47.6l7.8,20.5h38.4l-58-141H206.8z M219.2,37l10.8,30.3l0.8,2.4h-23.1
+				l1.2-3.2L219.2,37z"/>
 		</g>
 	</g>
 </g>
 <g>
-	<g transform="translate(706.014502, 362.531459)">
+	<g transform="translate(549.903744, 365.587262)">
 		<g>
-			<path class="st4" d="M299.5-19.8h-54.2v140.6h33.9V73.6h5.6l29.1,47.2h36.3v-6.4l-29.9-44.2c18.3-8.8,27.3-26.7,27.3-43.6
-				C347.5,3.5,331.4-19.8,299.5-19.8z M298.7,42.8h-19.5V12.9h19.5c10.4,0,15.5,7.8,15.5,15.1C314.2,35.2,308.8,42.8,298.7,42.8z"/>
+			<path class="st5" d="M247.5-18.8h-54.2v140.7h33.9V74.6h5.6l29.1,47.2h36.3v-6.4l-29.9-44.2c18.3-8.8,27.3-26.7,27.3-43.6
+				C295.5,4.5,279.3-18.8,247.5-18.8z M246.7,43.8h-19.5V13.9h19.5c10.4,0,15.5,7.8,15.5,15.1C262.2,36.2,256.8,43.8,246.7,43.8z"/>
 		</g>
 	</g>
 </g>
 <g>
-	<g transform="translate(793.851591, 362.531459)">
+	<g transform="translate(637.757942, 365.587262)">
 		<g>
-			<path class="st4" d="M305.5,51.3c0-26.5,19.1-39.6,38.2-39.6c15.9,0,32.1,9.2,36.7,27.7h34.5c-4.4-35.9-35.3-60.2-71.1-60.2
-				c-39.8,0-72.1,31.1-72.1,72.1s32.3,71.5,72.1,71.5c36.3,0,66.1-24.1,71.3-60.6h-34.5c-4.4,18.9-20.5,28.5-36.9,28.5
-				C324.6,90.8,305.5,77.6,305.5,51.3z"/>
+			<path class="st5" d="M253.4,52.3c0-26.5,19.1-39.6,38.3-39.6c15.9,0,32.1,9.2,36.7,27.7h34.5c-4.4-35.9-35.3-60.2-71.1-60.2
+				c-39.8,0-72.1,31.1-72.1,72.1c0,41,32.3,71.5,72.1,71.5c36.3,0,66.1-24.1,71.3-60.6h-34.5c-4.4,18.9-20.5,28.5-36.9,28.5
+				C272.5,91.8,253.4,78.6,253.4,52.3z"/>
 		</g>
 	</g>
 </g>
 <g>
-	<g transform="translate(908.428407, 362.531459)">
+	<g transform="translate(752.356875, 365.587262)">
 		<g>
-			<path class="st4" d="M421.5,120.8V-18.6h-34.1V34h-40.6v-52.6h-34.1v139.5h34.1v-54h40.6v54L421.5,120.8L421.5,120.8z"/>
+			<path class="st5" d="M369.5,121.9V-17.6h-34.1V35h-40.6v-52.6h-34.1v139.5h34.1v-54h40.6v54H369.5z"/>
 		</g>
 	</g>
 </g>
 <g>
-	<g transform="translate(411.388011, 535.996269)">
+	<g transform="translate(277.376447, 539.992275)">
 		<g>
-			<path class="st4" d="M203.5,38h-56.4v140.6h34.1v-41.4h22.3c32.7,0,49-24.9,49-49.4S236.1,38,203.5,38z M203.5,105.2h-22.3V71.1
-				h22.3c10.6,0,15.7,9,15.7,17.3C219.2,96.6,214,105.2,203.5,105.2z"/>
+			<path class="st5" d="M158.8,39.3h-56.4V180h34.1v-41.4h22.3c32.7,0,49-24.9,49-49.4S191.5,39.3,158.8,39.3z M158.8,106.5h-22.3
+				V72.4h22.3c10.6,0,15.7,9,15.7,17.3C174.5,97.9,169.4,106.5,158.8,106.5z"/>
 		</g>
 	</g>
 </g>
 <g>
-	<g transform="translate(499.523883, 535.996269)">
+	<g transform="translate(365.529471, 539.992275)">
 		<g>
-			<path class="st4" d="M223.9,37.6l-55.8,141h36.5l7.8-20.5H260l7.8,20.5h38.4l-58-141C248.2,37.6,223.9,37.6,223.9,37.6z
-				 M236.2,93.8l10.8,30.3l0.8,2.4h-23.1l1.2-3.2L236.2,93.8z"/>
+			<path class="st5" d="M179.2,39l-55.8,141h36.5l7.8-20.5h47.6L223,180h38.4l-58-141H179.2z M191.6,95.1l10.8,30.3l0.8,2.4H180
+				l1.2-3.2L191.6,95.1z"/>
 		</g>
 	</g>
 </g>
 <g>
-	<g transform="translate(601.104292, 535.996269)">
+	<g transform="translate(467.129585, 539.992275)">
 		<g>
-			<path class="st4" d="M316.1,37.6H206.9v31.9h37.7v109.2h34.1V69.5h37.5L316.1,37.6L316.1,37.6z"/>
+			<path class="st5" d="M271.5,39H162.3v31.9h37.7V180H234V70.8h37.5V39z"/>
 		</g>
 	</g>
 </g>
 <g>
-	<g transform="translate(691.779669, 535.996269)">
+	<g transform="translate(557.822629, 539.992275)">
 		<g>
-			<path class="st4" d="M319.4,178.7v-30.5h-23.1V69.5h23.1V38.4h-80.3v31.1h23.1v78.7h-23.1v30.5H319.4z"/>
+			<path class="st5" d="M274.8,180v-30.5h-23.1V70.8h23.1V39.7h-80.3v31.1h23.1v78.7h-23.1V180H274.8z"/>
 		</g>
 	</g>
 </g>
 <g>
-	<g transform="translate(761.093145, 535.996269)">
+	<g transform="translate(627.149715, 539.992275)">
 		<g>
-			<path class="st4" d="M263.7,38v140.6h92v-32.9h-57.8v-22.3h56.4v-33h-56.4V70.9h57.6V38H263.7z"/>
+			<path class="st5" d="M219,39.3V180h92v-32.9h-57.8v-22.3h56.4V91.7h-56.4V72.2h57.6V39.3H219z"/>
 		</g>
 	</g>
 </g>
 <g>
-	<g transform="translate(841.46104, 535.996269)">
+	<g transform="translate(707.533292, 539.992275)">
 		<g>
-			<path class="st4" d="M365,39.2v69.7l-48.2-69.7h-26.3v139.5h33.9v-67.9l47.6,67.9h26.7V39.2H365z"/>
+			<path class="st5" d="M320.3,40.5v69.7l-48.2-69.7h-26.3V180h33.9v-67.9l47.6,67.9H354V40.5H320.3z"/>
 		</g>
 	</g>
 </g>
 <g>
-	<g transform="translate(934.974708, 535.996269)">
+	<g transform="translate(801.065143, 539.992275)">
 		<g>
-			<path class="st4" d="M427.4,37.6H318.2v31.9h37.7v109.2H390V69.5h37.5V37.6H427.4z"/>
+			<path class="st5" d="M382.8,39H273.6v31.9h37.7V180h34.1V70.8h37.5V39z"/>
 		</g>
 	</g>
 </g>
