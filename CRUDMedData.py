@@ -6,7 +6,7 @@ import datetime
 from tkinter import messagebox
 from tkinter import Scrollbar
 from tkinter import PhotoImage
-
+from tkinter import Tk, Canvas, Label, PhotoImage
 import mysql.connector
 
 #this should have CREATE, UPDATE, DELETE functionality button
@@ -16,7 +16,21 @@ class MedData:
         self.root = root
         self.root.title("MedData")
         self.root.geometry("1540x800+0+0")
-      
+        self.root.resizable(width=False, height=False)  # Disable window resizing
+        icon = PhotoImage(file='materials/Icon.png')
+        self.root.iconphoto(True, icon)
+
+        canvas = Canvas(self.root, width=1540, height=800)
+        canvas.pack()
+
+        # Set the path to the background image
+        background_image_path6 = "materials/ManageBG.png"
+
+        # Create a PhotoImage object for the background image
+        background_image6 = PhotoImage(file=background_image_path6)
+
+        # Add the background image to the canvas
+        canvas.create_image(0, 0, anchor="nw", image=background_image6)
 
         self.patientid = StringVar()  # Should match the column name in Patient table: PatientID
         self.name = StringVar()  # Should match the column name in Patient table: Name
@@ -41,173 +55,167 @@ class MedData:
         self.illnessstartdate = StringVar()  # Should match the column name in diagnosisandmeds table: IllnessStartDate
         self.illnessenddate = StringVar()  # Should match the column name in diagnosisandmeds table: IllnessEndDate
 
-                #================title frame========================================
-
-        lbltitle = Label(self.root, bd=20, relief=RIDGE, text="MEDICAL HISTORY APPLICATION", fg="blue", bg="#cadce6",
-                        font=("arial", 50, "bold"))
-        lbltitle.pack(side=TOP, fill=X)
-
         # ==========================DataFrame======================
-        Dataframe = Frame(self.root, bd=20, relief=RIDGE)
+        Dataframe = Frame(self.root)
         Dataframe.place(x=0, y=130, width=1530, height=350)
 
-        DataframeLeft = LabelFrame(Dataframe, bd=10, padx=20, relief=RIDGE,
-                                   font=("arial", 12, "bold"), text="Patient Information")
+        DataframeLeft = LabelFrame(Dataframe,
+                                   font=("Poppins", 12, "bold"), text="PATIENT INFORMATION")
         DataframeLeft.place(x=0, y=5, width=980, height=320)
 
-        DataframeRight = LabelFrame(Dataframe, bd=10, relief=RIDGE, padx=10,
-                                    font=("times new roman", 12, "bold"), text="Output")
+        DataframeRight = LabelFrame(Dataframe,
+                                    font=("Poppins", 12, "bold"), text="OUTPUT")
         DataframeRight.place(x=990, y=5, width=460, height=320)
 
         # =============================== buttons frame =======================
-        Buttonframe = Frame(self.root, bd=20, relief=RIDGE)
+        Buttonframe = Frame(self.root)
         Buttonframe.place(x=0, y=480, width=1530, height=70)
 
         # =============================== Details frame ===========================
-        Detailsframe = Frame(self.root, bd=20, relief=RIDGE)
+        Detailsframe = Frame(self.root)
         Detailsframe.place(x=0, y=560, width=1530, height=230)
 
         # ================================ Dataframeleft =========================================
      
-        self.lblpatientid = Label(DataframeLeft, font=("arial", 10, "bold"), text="Patient ID:", padx=2)
+        self.lblpatientid = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Patient ID:", padx=2)
         self.lblpatientid.grid(row=0, column=0, sticky=W)
-        self.txtpatientid = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.patientid)
+        self.txtpatientid = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.patientid)
         self.txtpatientid.grid(row=0, column=1)
 
-        self.lblpatientname = Label(DataframeLeft, font=("arial", 10, "bold"), text="Patient Name:", padx=2)
+        self.lblpatientname = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Patient Name:", padx=2)
         self.lblpatientname.grid(row=1, column=0, sticky=W)
-        self.txtpatientname = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.name)
+        self.txtpatientname = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.name)
         self.txtpatientname.grid(row=1, column=1)
 
-        self.lblcontactnumber = Label(DataframeLeft, font=("arial", 10, "bold"), text="Contact Number:", padx=2, pady=2)
+        self.lblcontactnumber = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Contact Number:", padx=2, pady=2)
         self.lblcontactnumber.grid(row=2, column=0, sticky=W)
-        self.txtcontactnumber = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.contactnumber)
+        self.txtcontactnumber = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.contactnumber)
         self.txtcontactnumber.grid(row=2, column=1)
 
-        self.lblage = Label(DataframeLeft, font=("arial", 10, "bold"), text="Age:", padx=2, pady=4)
+        self.lblage = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Age:", padx=2, pady=4)
         self.lblage.grid(row=3, column=0, sticky=W)
-        self.txtage = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.age)
+        self.txtage = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.age)
         self.txtage.grid(row=3, column=1)
 
-        self.lblsex = Label(DataframeLeft, font=("arial", 10, "bold"), text="Sex:", padx=2, pady=4)
+        self.lblsex = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Sex:", padx=2, pady=4)
         self.lblsex.grid(row=4, column=0, sticky=W)
-        self.txtsex = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.sex)
+        self.txtsex = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.sex)
         self.txtsex.grid(row=4, column=1)
 
-        self.lblcurrentphysician = Label(DataframeLeft, font=("arial", 10, "bold"), text="Current Physician:", padx=2, pady=4)
+        self.lblcurrentphysician = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Current Physician:", padx=2, pady=4)
         self.lblcurrentphysician.grid(row=5, column=0, sticky=W)
-        self.txtcurrentphysician = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.currentphysician)
+        self.txtcurrentphysician = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.currentphysician)
         self.txtcurrentphysician.grid(row=5, column=1)
 
 
-        self.lbldateoflastupdate = Label(DataframeLeft, font=("arial", 10, "bold"), text="Date of Last Update:", padx=2, pady=4)
+        self.lbldateoflastupdate = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Date of Last Update:", padx=2, pady=4)
         self.lbldateoflastupdate.grid(row=6, column=0, sticky=W)
-        self.txtdateoflastupdate = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.dateoflastupdate)
+        self.txtdateoflastupdate = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.dateoflastupdate)
         self.txtdateoflastupdate.grid(row=6, column=1)
 
 
-        self.lblphysicianlicenceno = Label(DataframeLeft, font=("arial", 10, "bold"), text="Physician License Number:", padx=2, pady=4)
+        self.lblphysicianlicenceno = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Physician License Number:", padx=2, pady=4)
         self.lblphysicianlicenceno.grid(row=7, column=0, sticky=W)
-        self.txtphysicianlicenceno = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.physicianlicenceno)
+        self.txtphysicianlicenceno = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.physicianlicenceno)
         self.txtphysicianlicenceno.grid(row=7, column=1)
 
-        self.lblphysician = Label(DataframeLeft, font=("arial", 10, "bold"), text="Physician:", padx=2, pady=2)
+        self.lblphysician = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Physician:", padx=2, pady=2)
         self.lblphysician.grid(row=8, column=0, sticky=W)
-        self.txtphysician = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.physician)
+        self.txtphysician = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.physician)
         self.txtphysician.grid(row=8, column=1)
 
-        self.lblcontactnum2 = Label(DataframeLeft, font=("arial", 10, "bold"), text="Contact Number:", padx=2, pady=2)
+        self.lblcontactnum2 = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Contact Number:", padx=2, pady=2)
         self.lblcontactnum2.grid(row=9, column=0, sticky=W)
-        self.txtcontactnum2 = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.contactnum2)
+        self.txtcontactnum2 = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.contactnum2)
         self.txtcontactnum2.grid(row=9, column=1)
 
-        self.lblillnesscode = Label(DataframeLeft, font=("arial", 10, "bold"), text="Illness Code:", padx=2, pady=2)
+        self.lblillnesscode = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Illness Code:", padx=2, pady=2)
         self.lblillnesscode.grid(row=10, column=0, sticky=W)
-        self.txtillnesscode = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.illnesscode)
+        self.txtillnesscode = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.illnesscode)
         self.txtillnesscode.grid(row=10, column=1)
 
-        self.lblillness = Label(DataframeLeft, font=("arial", 10, "bold"), text="Illness:", padx=2, pady=2)
+        self.lblillness = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Illness:", padx=2, pady=2)
         self.lblillness.grid(row=0, column=2, sticky=W)
-        self.txtillness = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.illness)
+        self.txtillness = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.illness)
         self.txtillness.grid(row=0, column=3)
 
-        self.lblmedicinerefnumber = Label(DataframeLeft, font=("arial", 10, "bold"), text="Medicine Reference Number:", padx=2)
+        self.lblmedicinerefnumber = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Medicine Reference Number:", padx=2)
         self.lblmedicinerefnumber.grid(row=1, column=2, sticky=W)
-        self.txtmedicinerefnumber = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.medicinereferencenumber)
+        self.txtmedicinerefnumber = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.medicinereferencenumber)
         self.txtmedicinerefnumber.grid(row=1, column=3)
 
-        self.lblmedicationname = Label(DataframeLeft, font=("arial", 10, "bold"), text="Medication Name:", padx=2, pady=2)
+        self.lblmedicationname = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Medication Name:", padx=2, pady=2)
         self.lblmedicationname.grid(row=2, column=2, sticky=W)
-        self.txtmedicationname = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.medicationname)
+        self.txtmedicationname = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.medicationname)
         self.txtmedicationname.grid(row=2, column=3)
 
-        self.lbldosage = Label(DataframeLeft, font=("arial", 10, "bold"), text="Dosage:", padx=2, pady=2)
+        self.lbldosage = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Dosage:", padx=2, pady=2)
         self.lbldosage.grid(row=3, column=2, sticky=W)
-        self.txtdosage = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.dosage)
+        self.txtdosage = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.dosage)
         self.txtdosage.grid(row=3, column=3)
 
-        self.lblfreq = Label(DataframeLeft, font=("arial", 10, "bold"), text="Frequency:", padx=2, pady=2)
+        self.lblfreq = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Frequency:", padx=2, pady=2)
         self.lblfreq.grid(row=4, column=2, sticky=W)
-        self.txtfreq = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.freq)
+        self.txtfreq = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.freq)
         self.txtfreq.grid(row=4, column=3, sticky=W)
 
-        self.lblmedstartdate = Label(DataframeLeft, font=("arial", 10, "bold"), text="Medication Start Date:", padx=2, pady=2)
+        self.lblmedstartdate = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Medication Start Date:", padx=2, pady=2)
         self.lblmedstartdate.grid(row=5, column=2, sticky=W)
-        self.txtmedstartdate = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.medstartdate)
+        self.txtmedstartdate = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.medstartdate)
         self.txtmedstartdate.grid(row=5, column=3)
 
-        self.lblmedenddate = Label(DataframeLeft, font=("arial", 10, "bold"), text="Medication End Date:", padx=2, pady=2)
+        self.lblmedenddate = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Medication End Date:", padx=2, pady=2)
         self.lblmedenddate.grid(row=6, column=2, sticky=W)
-        self.txtmedenddate = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.medenddate)
+        self.txtmedenddate = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.medenddate)
         self.txtmedenddate.grid(row=6, column=3)
 
-        self.lblpurpose = Label(DataframeLeft, font=("arial", 10, "bold"), text="Purpose:", padx=2, pady=2)
+        self.lblpurpose = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Purpose:", padx=2, pady=2)
         self.lblpurpose.grid(row=7, column=2, sticky=W)
-        self.txtpurpose = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.purpose)
+        self.txtpurpose = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.purpose)
         self.txtpurpose.grid(row=7, column=3)
 
-        self.lbltreatmentnotes = Label(DataframeLeft, font=("arial", 10, "bold"), text="Treatment Notes:", padx=2, pady=2)
+        self.lbltreatmentnotes = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Treatment Notes:", padx=2, pady=2)
         self.lbltreatmentnotes.grid(row=8, column=2, sticky=W)
-        self.txttreatmentnotes = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.treatmentnotes)
+        self.txttreatmentnotes = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.treatmentnotes)
         self.txttreatmentnotes.grid(row=8, column=3)
 
-        self.lblillnessstartdate = Label(DataframeLeft, font=("arial", 10, "bold"), text="Illness Start Date:", padx=2, pady=2)
+        self.lblillnessstartdate = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Illness Start Date:", padx=2, pady=2)
         self.lblillnessstartdate.grid(row=9, column=2, sticky=W)
-        self.txtillnessstartdate = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.illnessstartdate)
+        self.txtillnessstartdate = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.illnessstartdate)
         self.txtillnessstartdate.grid(row=9, column=3)
 
-        self.lblillnessenddate = Label(DataframeLeft, font=("arial", 10, "bold"), text="Illness End Date:", padx=2, pady=2)
+        self.lblillnessenddate = Label(DataframeLeft, font=("Poppins SemiBold", 10, "bold"), text="Illness End Date:", padx=2, pady=2)
         self.lblillnessenddate.grid(row=10, column=2, sticky=W)
-        self.txtillnessenddate = Entry(DataframeLeft, font=("arial", 10), width=38, textvariable=self.illnessenddate)
+        self.txtillnessenddate = Entry(DataframeLeft, font=("Poppins SemiBold", 10), width=38, textvariable=self.illnessenddate)
         self.txtillnessenddate.grid(row=10, column=3)
 
         #=========================== DataframeRight=======================================
-        self.txtOutput = Text(DataframeRight, font = ("arial", 12, "bold"), width=45, height = 16, padx = 2, pady = 6)
+        self.txtOutput = Text(DataframeRight, font = ("Poppins SemiBold", 12, "bold"), width=45, height = 16, padx = 2, pady = 6)
         self.txtOutput.grid (row = 0, column = 0)
 
         #============================ Button ====================================
-        self.btnCreate = Button(Buttonframe, command=self.iCreate ,text="Add New Data", bg="#318eeb", fg="white", font=("arial", 12, "bold"),
+        self.btnCreate = Button(Buttonframe, command=self.iCreate ,text="Add New Data", bg="#05066D", fg="white", font=("Poppins", 12, "bold"),
                         width=23, height=2, padx=2, pady=6)
         self.btnCreate.grid(row=0, column=0)
 
-        self.btnRead = Button(Buttonframe, command=self.iRead, text="Show", bg="#318eeb", fg="white",
-                             font=("arial", 12, "bold"), width=23, height=2, padx=2, pady=6)
+        self.btnRead = Button(Buttonframe, command=self.iRead, text="Show", bg="#05066D", fg="white",
+                             font=("Poppins", 12, "bold"), width=23, height=2, padx=2, pady=6)
         self.btnRead.grid(row=0, column=1)
         
         
-        self.btnUpdate = Button(Buttonframe, command=self.iUpdate, text="Update", bg="#318eeb", fg="white", font=("arial", 12, "bold"),
+        self.btnUpdate = Button(Buttonframe, command=self.iUpdate, text="Update", bg="#05066D", fg="white", font=("Poppins", 12, "bold"),
                    width=23, height=2, padx=2, pady=6)
         self.btnUpdate.grid(row=0, column=2)
 
-        self.btnDelete = Button(Buttonframe, command= self.iDelete, text="Delete", bg="#318eeb", fg="white", font=("arial", 12, "bold"),
+        self.btnDelete = Button(Buttonframe, command= self.iDelete, text="Delete", bg="#05066D", fg="white", font=("Poppins", 12, "bold"),
                    width=23, height=2, padx=2, pady=6)
         self.btnDelete.grid(row=0, column=3)
 
-        self.btnClear = Button(Buttonframe,command =self.Clear, text="Clear", bg="#318eeb", fg="white", font=("arial", 12, "bold"),
+        self.btnClear = Button(Buttonframe,command =self.Clear, text="Clear", bg="#05066D", fg="white", font=("Poppins", 12, "bold"),
                   width=23, height=2, padx=2, pady=6)
         self.btnClear.grid(row=0, column=4)
 
-        self.btnExit = Button(Buttonframe,command=self.iExit, text="Exit", bg="#318eeb", fg="white", font=("arial", 12, "bold"),
+        self.btnExit = Button(Buttonframe,command=self.iExit, text="Exit", bg="#05066D", fg="white", font=("Poppins", 12, "bold"),
                  width=23, height=2, padx=2, pady=6)
         self.btnExit.grid(row=0, column=5)
 
@@ -235,7 +243,7 @@ class MedData:
         scroll_y.grid(row=0, column=1, sticky="ns")
 
         # Create the Text widget and configure it to work with the scrollbars
-        self.txtOutput = Text(DataframeRight, font=("arial", 12, "bold"), width=45, height=16,
+        self.txtOutput = Text(DataframeRight, font=("Poppins SemiBold", 12, "bold"), width=45, height=16,
                             padx=2, pady=6, wrap=NONE, xscrollcommand=scroll_x.set, yscrollcommand=scroll_y.set)
         self.txtOutput.grid(row=0, column=0, sticky="nsew")
 
@@ -340,7 +348,7 @@ class MedData:
         conn = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="database27",
+            password="Nina1232580",
             database="patient_db"
         )
         my_cursor = conn.cursor()
@@ -483,7 +491,7 @@ class MedData:
                 con = mysql.connector.connect(
                     host="localhost",
                     user="root",
-                    password="database27",
+                    password="Nina1232580",
                     database="patient_db",
                 )
                 cursor = con.cursor()
@@ -576,7 +584,7 @@ class MedData:
             con = mysql.connector.connect(
                 host="localhost",
                 user="root",
-                password="database27",
+                password="Nina1232580",
                 database="patient_db",
             )
             cursor = con.cursor()
@@ -648,7 +656,7 @@ class MedData:
                 con = mysql.connector.connect(
                     host="localhost",
                     user="root",
-                    password="database27",
+                    password="Nina1232580",
                     database="patient_db"
                 )
                 cursor = con.cursor()
