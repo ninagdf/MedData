@@ -20,7 +20,7 @@ canvas = Canvas(window, width=1280, height=720)
 canvas.pack()
 
 # Set the path to the background image
-background_image_path4 = "D:/ninaf/MedData/MedData/materials/AboutUsBG.png"
+background_image_path4 = "materials/AboutUsBG.png"
 
 # Create a PhotoImage object for the background image
 background_image4 = PhotoImage(file=background_image_path4)
@@ -32,7 +32,7 @@ canvas.create_image(0, 0, anchor="nw", image=background_image4)
 transparent_image = PhotoImage(width=1, height=1)
 
 # Load the button image
-AboutUsBackButton = PhotoImage(file='D:/ninaf/MedData/MedData/materials/AboutUsBack.png')
+AboutUsBackButton = PhotoImage(file='materials/AboutUsBack.png')
 
 # Resize the button image
 resized_image4 = AboutUsBackButton.subsample(int(AboutUsBackButton.width() / 70), int(AboutUsBackButton.height() / 45))
