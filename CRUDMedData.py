@@ -5,6 +5,7 @@ from tkinter import messagebox
 
 #this should have CREATE, UPDATE, DELETE functionality button
 #additional SEARCH 
+
 class MedData:
     def __init__(self, root):
         self.root = root
@@ -14,9 +15,12 @@ class MedData:
         icon = PhotoImage(file='materials/Icon.png')
         self.root.iconphoto(True, icon)
 
-        def click():
-            my_label.config(text="Button Clicked")
-
+        def to_home():
+            try:
+                root.destroy()
+            finally:
+                import Home
+                
         def on_enter_AboutUsBack(event):
             button4.config(image=button4.resized_hover_image)
 
@@ -34,7 +38,7 @@ class MedData:
         resized_image4 = AboutUsBackButton.subsample(int(AboutUsBackButton.width() / 90), int(AboutUsBackButton.height() / 55))
 
         # Create button widget
-        button4 = Button(root, command=click, image=resized_image4, bd=0, relief="flat", highlightthickness=0, compound="center",
+        button4 = Button(root, command=to_home, image=resized_image4, bd=0, relief="flat", highlightthickness=0, compound="center",
                     fg="white", bg="white", activebackground="white", activeforeground="white")
 
         # Set the width and height of the button
