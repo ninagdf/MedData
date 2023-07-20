@@ -28,13 +28,13 @@ def on_leave_about(event):
     button4.config(image=button4.resized_image)
 
 window = Tk()
-window.geometry("1280x720")  # Set initial window size
+window.geometry("1540x800")  # Set initial window size
 window.resizable(width=False, height=False)  # Disable window resizing
 window.title("MedData")
 icon = PhotoImage(file='materials/Icon.png')
 window.iconphoto(True,icon)
 
-canvas = Canvas(window, width=1280, height=720)
+canvas = Canvas(window, width=1540, height=800)
 canvas.pack()
 
 # Set the path to the background image
@@ -84,10 +84,10 @@ button4.resized_image = resized_image4
 button4.resized_hover_image = AboutUsButtonHover.subsample(21, 24)
 
 # Add the buttons to the canvas
-button1_window = canvas.create_window(760, 90, anchor="nw", window=button1)
-button2_window = canvas.create_window(760, 235, anchor="nw", window=button2)
-button3_window = canvas.create_window(760, 380, anchor="nw", window=button3)
-button4_window = canvas.create_window(760, 525, anchor="nw", window=button4)
+button1_window = canvas.create_window(970, 100, anchor="nw", window=button1)
+button2_window = canvas.create_window(970, 245, anchor="nw", window=button2)
+button3_window = canvas.create_window(970, 390, anchor="nw", window=button3)
+button4_window = canvas.create_window(970, 535, anchor="nw", window=button4)
 
 # Event bindings for hovering effect
 button1.bind('<Enter>', on_enter_manage)
