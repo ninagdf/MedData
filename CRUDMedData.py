@@ -2,6 +2,7 @@ from tkinter import *
 import tkinter.ttk as ttk
 import mysql.connector
 from tkinter import messagebox
+import subprocess
 
 #this should have CREATE, UPDATE, DELETE functionality button
 #additional SEARCH 
@@ -16,10 +17,8 @@ class MedData:
         self.root.iconphoto(True, icon)
 
         def to_home():
-            try:
-                root.destroy()
-            finally:
-                import Home
+            root.destroy()
+            subprocess.run(['python', 'Home.py'])
                 
         def on_enter_AboutUsBack(event):
             button4.config(image=button4.resized_hover_image)

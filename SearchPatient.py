@@ -1,4 +1,5 @@
 from tkinter import *
+import subprocess
 
 def on_enter_AboutUsBack(event):
     button4.config(image=button4.resized_hover_image)
@@ -7,10 +8,8 @@ def on_leave_AboutUsBack(event):
     button4.config(image=button4.resized_image)
 
 def to_home():
-    try:
-        window.destroy()
-    finally:
-        import Home
+    window.destroy()
+    subprocess.run(['python', 'Home.py'])
         
 window = Tk()
 window.geometry("1540x800")  # Set initial window size

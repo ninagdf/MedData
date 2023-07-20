@@ -1,4 +1,5 @@
 from tkinter import *
+import subprocess
 
 def on_enter_manage(event):
     button1.config(image=button1.resized_hover_image)
@@ -18,23 +19,18 @@ def on_enter_about(event):
 def on_leave_about(event):
     button4.config(image=button4.resized_image)
 
+
 def to_manage():
-    try:
-        window.destroy()
-    finally:
-        import CRUDMedData
+    window.destroy()
+    subprocess.run(['python', 'CRUDMedData.py'])
 
 def to_search():
-    try:
-        window.destroy()
-    finally:
-        import SearchPatient 
+    window.destroy()
+    subprocess.run(['python', 'SearchPatient.py'])
 
 def to_ab():
-    try:
-        window.destroy()
-    finally:
-        import AboutUs
+    window.destroy()
+    subprocess.run(['python', 'AboutUs.py'])
         
 window = Tk()
 window.geometry("1540x800")  # Set initial window size

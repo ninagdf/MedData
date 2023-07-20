@@ -1,10 +1,9 @@
 from tkinter import *
+import subprocess
 
 def to_home():
-    try:
-        window.destroy()
-    finally:
-        import Home      
+    window.destroy()
+    subprocess.run(['python', 'Home.py'])
 
 def on_enter_AboutUsBack(event):
     button4.config(image=button4.resized_hover_image)
