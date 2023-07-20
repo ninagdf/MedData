@@ -26,6 +26,13 @@ def on_enter_about(event):
 
 def on_leave_about(event):
     button4.config(image=button4.resized_image)
+    
+def to_ab():
+    try:
+        window.destroy()
+    finally:
+        import AboutUs
+        AboutUs.aboutus()
 
 window = Tk()
 window.geometry("1280x720")  # Set initial window size
@@ -62,7 +69,7 @@ resized_image4 = AboutUsButton.subsample(int(AboutUsButton.width() / 340), int(A
 button1 = Button(window, command=click, image=resized_image1, bd=0, relief="flat", highlightthickness=0)
 button2 = Button(window, command=click, image=resized_image2, bd=0, relief="flat", highlightthickness=0)
 button3 = Button(window, command=click, image=resized_image3, bd=0, relief="flat", highlightthickness=0)
-button4 = Button(window, command=click, image=resized_image4, bd=0, relief="flat", highlightthickness=0)
+button4 = Button(window, command=to_ab, image=resized_image4, bd=0, relief="flat", highlightthickness=0)
 
 # Hovered button images
 ManageButtonHover = PhotoImage(file='materials/ManageButtonHover.png')
